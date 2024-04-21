@@ -1,0 +1,309 @@
+\hypertarget{classProceso}{}\doxysection{Referencia de la Clase Proceso}
+\label{classProceso}\index{Proceso@{Proceso}}
+
+
+Representa un proceso.  
+
+
+
+
+{\ttfamily \#include $<$Proceso.\+hh$>$}
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classProceso_a632f57d6ec48e76c80fbeb7734c1148c}{Proceso}} ()
+\begin{DoxyCompactList}\small\item\em Constructora por defecto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classProceso_a27f51e4466ebfeaf89f8324157b081d9}{avanzar\+\_\+tiempo\+\_\+proceso}} (int t)
+\begin{DoxyCompactList}\small\item\em Se avanza el tiempo del proceso un numero t. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classProceso_a4816bee1b97d41126160494109f84c42}{consultar\+\_\+tiempo}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve la duracion del proceso. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classProceso_a33b52579d6ee93986d33341bacc86521}{consultar\+\_\+id}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el identificador del proceso. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classProceso_a55976a19b8d909276c62e8be10036df5}{consultar\+\_\+memoria}} () const
+\begin{DoxyCompactList}\small\item\em Dice la memoria que ocupa el proceso. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classProceso_ad133f53bba77755f779ef63b6e529cdb}{leer}} ()
+\begin{DoxyCompactList}\small\item\em Lee los datos de un proceso. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classProceso_ac70be7385219b8e06efdb2b28fd4b954}{escritura}} () const
+\begin{DoxyCompactList}\small\item\em Escribe los datos del proceso. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classProceso_aedb36cca995b8b23d2e3d3739d30b216}{id}}
+\begin{DoxyCompactList}\small\item\em Identificador del proceso. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classProceso_ac37ccb93a804abd4b829ac7d4ad828bd}{memoria}}
+\begin{DoxyCompactList}\small\item\em Memoria que ocupa. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classProceso_a23541aa8fe702c686a760c378a1b00d2}{tiempo}}
+\begin{DoxyCompactList}\small\item\em Tiempo que tarda a ejecturase. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representa un proceso. 
+
+Procesos con su identificador. Puede usarse para saber la memoria que ocupan y el tiempo para ejecutarse. 
+
+Definición en la línea 19 del archivo Proceso.\+hh.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classProceso_a632f57d6ec48e76c80fbeb7734c1148c}\label{classProceso_a632f57d6ec48e76c80fbeb7734c1148c}} 
+\index{Proceso@{Proceso}!Proceso@{Proceso}}
+\index{Proceso@{Proceso}!Proceso@{Proceso}}
+\doxysubsubsection{\texorpdfstring{Proceso()}{Proceso()}}
+{\footnotesize\ttfamily Proceso\+::\+Proceso (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructora por defecto. 
+
+Se ejecuta automaticamente al declarar un proceso. \begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un proceso sin informacion. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 8 del archivo Proceso.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8                 \{}
+\DoxyCodeLine{9   \textcolor{keywordtype}{id} = 0;}
+\DoxyCodeLine{10   \mbox{\hyperlink{classProceso_ac37ccb93a804abd4b829ac7d4ad828bd}{memoria}} = 0;}
+\DoxyCodeLine{11   \mbox{\hyperlink{classProceso_a23541aa8fe702c686a760c378a1b00d2}{tiempo}} = 0;}
+\DoxyCodeLine{12 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classProceso_a27f51e4466ebfeaf89f8324157b081d9}\label{classProceso_a27f51e4466ebfeaf89f8324157b081d9}} 
+\index{Proceso@{Proceso}!avanzar\_tiempo\_proceso@{avanzar\_tiempo\_proceso}}
+\index{avanzar\_tiempo\_proceso@{avanzar\_tiempo\_proceso}!Proceso@{Proceso}}
+\doxysubsubsection{\texorpdfstring{avanzar\_tiempo\_proceso()}{avanzar\_tiempo\_proceso()}}
+{\footnotesize\ttfamily void Proceso\+::avanzar\+\_\+tiempo\+\_\+proceso (\begin{DoxyParamCaption}\item[{int}]{t }\end{DoxyParamCaption})}
+
+
+
+Se avanza el tiempo del proceso un numero t. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape t es un entero positivo} 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parámetros}
+{\em t} & Tiempo que se tiene que avanzar el proceso. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondición}
+Se ha reducido el valor del parametro implicito que indica el tiempo del proceso el valor de t. ~\newline
+ 
+\end{DoxyPostcond}
+
+
+Definición en la línea 15 del archivo Proceso.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{15                                          \{}
+\DoxyCodeLine{16   \mbox{\hyperlink{classProceso_a23541aa8fe702c686a760c378a1b00d2}{tiempo}} -\/= t;}
+\DoxyCodeLine{17 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classProceso_a33b52579d6ee93986d33341bacc86521}\label{classProceso_a33b52579d6ee93986d33341bacc86521}} 
+\index{Proceso@{Proceso}!consultar\_id@{consultar\_id}}
+\index{consultar\_id@{consultar\_id}!Proceso@{Proceso}}
+\doxysubsubsection{\texorpdfstring{consultar\_id()}{consultar\_id()}}
+{\footnotesize\ttfamily int Proceso\+::consultar\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el identificador del proceso. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Devuelve el parametro implicito del identificador del proceso. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+int Identificador del proceso. 
+\end{DoxyReturn}
+
+
+Definición en la línea 25 del archivo Proceso.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25                                \{}
+\DoxyCodeLine{26   \textcolor{keywordflow}{return} \mbox{\hyperlink{classProceso_aedb36cca995b8b23d2e3d3739d30b216}{id}};}
+\DoxyCodeLine{27 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classProceso_a55976a19b8d909276c62e8be10036df5}\label{classProceso_a55976a19b8d909276c62e8be10036df5}} 
+\index{Proceso@{Proceso}!consultar\_memoria@{consultar\_memoria}}
+\index{consultar\_memoria@{consultar\_memoria}!Proceso@{Proceso}}
+\doxysubsubsection{\texorpdfstring{consultar\_memoria()}{consultar\_memoria()}}
+{\footnotesize\ttfamily int Proceso\+::consultar\+\_\+memoria (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Dice la memoria que ocupa el proceso. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Devuelve el parametro implicito que indica la memoria del proceso. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+int Memoria que ocupa el proceso. 
+\end{DoxyReturn}
+
+
+Definición en la línea 30 del archivo Proceso.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30                                     \{}
+\DoxyCodeLine{31   \textcolor{keywordflow}{return} \mbox{\hyperlink{classProceso_ac37ccb93a804abd4b829ac7d4ad828bd}{memoria}};}
+\DoxyCodeLine{32 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classProceso_a4816bee1b97d41126160494109f84c42}\label{classProceso_a4816bee1b97d41126160494109f84c42}} 
+\index{Proceso@{Proceso}!consultar\_tiempo@{consultar\_tiempo}}
+\index{consultar\_tiempo@{consultar\_tiempo}!Proceso@{Proceso}}
+\doxysubsubsection{\texorpdfstring{consultar\_tiempo()}{consultar\_tiempo()}}
+{\footnotesize\ttfamily int Proceso\+::consultar\+\_\+tiempo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Devuelve la duracion del proceso. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Devuelve el parametro implicito que indica el tiempo del proceso. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+int Tiempo que dura el proceso. 
+\end{DoxyReturn}
+
+
+Definición en la línea 20 del archivo Proceso.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20                                    \{}
+\DoxyCodeLine{21   \textcolor{keywordflow}{return} \mbox{\hyperlink{classProceso_a23541aa8fe702c686a760c378a1b00d2}{tiempo}};}
+\DoxyCodeLine{22 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classProceso_ac70be7385219b8e06efdb2b28fd4b954}\label{classProceso_ac70be7385219b8e06efdb2b28fd4b954}} 
+\index{Proceso@{Proceso}!escritura@{escritura}}
+\index{escritura@{escritura}!Proceso@{Proceso}}
+\doxysubsubsection{\texorpdfstring{escritura()}{escritura()}}
+{\footnotesize\ttfamily void Proceso\+::escritura (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Escribe los datos del proceso. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.{\itshape  }}
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+{\itshape {\itshape  Escribe los datos del proceso. }}
+\end{DoxyPostcond}
+
+
+Definición en la línea 40 del archivo Proceso.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{40                              \{}
+\DoxyCodeLine{41   cout << \textcolor{keywordtype}{id} << \textcolor{charliteral}{' '} << \mbox{\hyperlink{classProceso_ac37ccb93a804abd4b829ac7d4ad828bd}{memoria}} << \textcolor{charliteral}{' '} << \mbox{\hyperlink{classProceso_a23541aa8fe702c686a760c378a1b00d2}{tiempo}} << endl;}
+\DoxyCodeLine{42 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classProceso_ad133f53bba77755f779ef63b6e529cdb}\label{classProceso_ad133f53bba77755f779ef63b6e529cdb}} 
+\index{Proceso@{Proceso}!leer@{leer}}
+\index{leer@{leer}!Proceso@{Proceso}}
+\doxysubsubsection{\texorpdfstring{leer()}{leer()}}
+{\footnotesize\ttfamily void Proceso\+::leer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Lee los datos de un proceso. 
+
+\begin{DoxyPrecond}{Precondición}
+Hay preparado en el canal estandard de entrada tres enteros no negativos. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Los parametros implicitos pasan a tener los valores leidos del canal estandard de entrada. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 35 del archivo Proceso.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{35                   \{}
+\DoxyCodeLine{36   cin >> \textcolor{keywordtype}{id} >> \mbox{\hyperlink{classProceso_ac37ccb93a804abd4b829ac7d4ad828bd}{memoria}} >> \mbox{\hyperlink{classProceso_a23541aa8fe702c686a760c378a1b00d2}{tiempo}};}
+\DoxyCodeLine{37 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classProceso_aedb36cca995b8b23d2e3d3739d30b216}\label{classProceso_aedb36cca995b8b23d2e3d3739d30b216}} 
+\index{Proceso@{Proceso}!id@{id}}
+\index{id@{id}!Proceso@{Proceso}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int Proceso\+::id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Identificador del proceso. 
+
+
+
+Definición en la línea 24 del archivo Proceso.\+hh.
+
+\mbox{\Hypertarget{classProceso_ac37ccb93a804abd4b829ac7d4ad828bd}\label{classProceso_ac37ccb93a804abd4b829ac7d4ad828bd}} 
+\index{Proceso@{Proceso}!memoria@{memoria}}
+\index{memoria@{memoria}!Proceso@{Proceso}}
+\doxysubsubsection{\texorpdfstring{memoria}{memoria}}
+{\footnotesize\ttfamily int Proceso\+::memoria\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Memoria que ocupa. 
+
+
+
+Definición en la línea 26 del archivo Proceso.\+hh.
+
+\mbox{\Hypertarget{classProceso_a23541aa8fe702c686a760c378a1b00d2}\label{classProceso_a23541aa8fe702c686a760c378a1b00d2}} 
+\index{Proceso@{Proceso}!tiempo@{tiempo}}
+\index{tiempo@{tiempo}!Proceso@{Proceso}}
+\doxysubsubsection{\texorpdfstring{tiempo}{tiempo}}
+{\footnotesize\ttfamily int Proceso\+::tiempo\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tiempo que tarda a ejecturase. 
+
+
+
+Definición en la línea 28 del archivo Proceso.\+hh.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Proceso_8hh}{Proceso.\+hh}}\item 
+\mbox{\hyperlink{Proceso_8cc}{Proceso.\+cc}}\end{DoxyCompactItemize}
